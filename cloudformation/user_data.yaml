@@ -20,8 +20,8 @@ Resources:
       ImageId: ami-0dba2cb6798deb6d8
       KeyName: flask
       UserData:
-        Fn::Base64: 
-          !Sub 
+        Fn::Base64: # use to pass input string data or encoded input data to ec2 instance via user data 
+          !Sub # use to substitute the variable in input string 
             - |
               #!/bin/bash
               apt-get update -y 
